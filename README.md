@@ -44,6 +44,12 @@ A PyQt5 dashboard for managing GPU inference servers, RAM-tiered model caching, 
 
 ![Scripts](docs/screenshots/flightcontrol5.png)
 
+## Status
+
+The Python source for FlightControl has been removed as the core Speedloader backend is being rewritten in Rust. The Rust implementation is available at [Skylark-Software/speedloader](https://github.com/Skylark-Software/speedloader).
+
+This repository preserves the project overview, architecture reference, and screenshots from the PyQt5 prototype.
+
 ## Requirements
 
 - Python 3.10+
