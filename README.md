@@ -96,9 +96,6 @@ FlightControl/
 └── utils/                   # Parsing and process utilities
 ```
 
-## Theme
-
-FlightControl uses the [Catppuccin Mocha](https://github.com/catppuccin/catppuccin) color palette.
 
 ## License
 
