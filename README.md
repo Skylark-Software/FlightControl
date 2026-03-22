@@ -57,7 +57,7 @@ The Speedloader backend has been extracted and rewritten in Rust as a standalone
 | Project | Description |
 |---------|-------------|
 | [Speedloader](https://github.com/Skylark-Software/Speedloader) | Rust rewrite of the Speedloader backend — fast hybrid RAM/storage management for LLM models |
-| [EagleBranch](https://github.com/Skylark-Software/EagleBranch) | Git repository management and DevOps tools |
+| [EagleBranch](https://github.com/Skylark-Software/EagleBranch) | EAGLE speculative decoding for Mistral Large 3 and DeepSeek (llama.cpp fork) |
 
 ---
 
