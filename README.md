@@ -1,8 +1,12 @@
 # FlightControl
 
+> **Note:** FlightControl is being rewritten in Rust. The Speedloader backend is available at [Skylark-Software/Speedloader](https://github.com/Skylark-Software/Speedloader). This repository preserves the project overview and screenshots from the PyQt5 prototype.
+
 A PyQt5 dashboard for managing GPU inference servers, RAM-tiered model caching, and distributed block storage across multi-node clusters.
 
 ![Dashboard](docs/screenshots/flightcontrol1.png)
+
+---
 
 ## Features
 
@@ -14,11 +18,13 @@ A PyQt5 dashboard for managing GPU inference servers, RAM-tiered model caching, 
 - RDMA/InfiniBand resource panel
 
 ### Speedloader (RAM Tier Management)
-- **Storage Tiers** — Manage multiple tmpfs-backed RAM tiers with priority-based model placement
+- **Storage Tiers** — Multiple tmpfs-backed RAM tiers with priority-based model placement
 - **Model Placement** — Strategies: fastest-fit, fill-first, round-robin with per-model tier pinning
 - **Remote Hosts** — NVMe-oF over RDMA block devices from remote machines (swap, pool, or raw)
 - **Local Raw Blocks** — Loop-backed block devices from local RAM for RAID membership
 - **Block Aggregation** — Combine blocks across hosts into mdadm RAID 0 arrays for high-throughput model loading
+
+The Speedloader backend has been extracted and rewritten in Rust as a standalone tool: [Skylark-Software/Speedloader](https://github.com/Skylark-Software/Speedloader)
 
 ![Speedloader](docs/screenshots/flightcontrol2.png)
 
@@ -44,59 +50,19 @@ A PyQt5 dashboard for managing GPU inference servers, RAM-tiered model caching, 
 
 ![Scripts](docs/screenshots/flightcontrol5.png)
 
-## Status
+---
 
-The Python source for FlightControl has been removed as the core Speedloader backend is being rewritten in Rust. The Rust implementation is available at [Skylark-Software/speedloader](https://github.com/Skylark-Software/speedloader).
+## Related Projects
 
-This repository preserves the project overview, architecture reference, and screenshots from the PyQt5 prototype.
+| Project | Description |
+|---------|-------------|
+| [Speedloader](https://github.com/Skylark-Software/Speedloader) | Rust rewrite of the Speedloader backend — fast hybrid RAM/storage management for LLM models |
+| [Skywire](https://github.com/Skylark-Software/Skywire) | Distributed multi-room audio routing |
 
-## Requirements
-
-- Python 3.10+
-- PyQt5
-- SSH key access to a local service account for privileged operations
-- Optional: Ollama, llama.cpp, or vLLM backend
-- Optional: NVMe-oF/RDMA for remote block devices
-- Optional: mdadm for block aggregation
-
-## Configuration
-
-FlightControl reads its Speedloader config from `/etc/speedloader/config.json` (or `~/.config/speedloader/config.json`). The main app config defines model definitions, script paths, and polling intervals.
-
-## Architecture
-
-```
-FlightControl/
-├── main.py                  # Application entry point
-├── main_window.py           # Main window with tab wiring
-├── config.py                # App configuration and model definitions
-├── speedloader/             # Speedloader library
-│   ├── __init__.py          # SpeedloaderManager (orchestrator)
-│   ├── config.py            # JSON config dataclasses
-│   ├── remote.py            # NVMe-oF remote host management
-│   ├── raid.py              # RAID 0 block aggregation (mdadm)
-│   ├── tiers.py             # RAM tier management
-│   ├── backends/            # Inference backend adapters
-│   │   ├── ollama.py
-│   │   ├── llamacpp.py
-│   │   └── vllm.py
-│   └── system/              # System utilities
-│       ├── ramdisk.py
-│       └── ssh.py
-├── widgets/                 # PyQt5 UI components
-│   ├── speedloader_tab.py   # Speedloader management tab
-│   ├── storage_tab.py       # Storage and model inventory
-│   ├── models_tab.py        # Model download/import
-│   ├── scripts_tab.py       # Script editor and launcher
-│   └── ...                  # Dashboard panels
-├── workers/                 # Background QThread workers
-│   ├── speedloader_worker.py
-│   ├── monitor_worker.py
-│   └── ...
-└── utils/                   # Parsing and process utilities
-```
-
+---
 
 ## License
 
-Copyright (c) 2025 Skylark Software. All rights reserved.
+Copyright (c) 2025-2026 Skylark Software LLC. All rights reserved.
+
+This software is provided for viewing and reference purposes only. No permission is granted to use, copy, modify, merge, publish, distribute, sublicense, or sell copies without explicit written permission. See [LICENSE](LICENSE).
