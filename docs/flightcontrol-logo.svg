@@ -1,0 +1,8 @@
+<svg width="900" height="180" viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg">
+  <line x1="24" y1="40" x2="48" y2="19" stroke="#62B8E8" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="24" y1="40" x2="48" y2="61" stroke="#62B8E8" stroke-width="1.2" stroke-linecap="round"/>
+  <g transform="translate(51,16) rotate(-37)"><polyline points="-6,-3.5 0,0 -6,3.5" fill="none" stroke="#62B8E8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(51,64) rotate(37)"><polyline points="-6,-3.5 0,0 -6,3.5" fill="none" stroke="#62B8E8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(62,40) rotate(0)"><polyline points="-6,-3.5 0,0 -6,3.5" fill="none" stroke="#62B8E8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="74" y="50" font-family="'DM Sans','Nunito Sans',ui-rounded,system-ui,-apple-system,sans-serif" font-size="30" font-weight="200" letter-spacing="-0.5" fill="#FFFFFF">Flight Control</text>
+</svg>

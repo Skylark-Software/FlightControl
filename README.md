@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/flightcontrol-logo.svg" alt="FlightControl" width="350">
+</p>
+
 # FlightControl
 
 > **Note:** FlightControl is being rewritten in Rust. The Speedloader backend is available at [Skylark-Software/Speedloader](https://github.com/Skylark-Software/Speedloader). This repository preserves the project overview and screenshots from the PyQt5 prototype.
@@ -66,3 +70,9 @@ The Speedloader backend has been extracted and rewritten in Rust as a standalone
 Copyright (c) 2025-2026 Skylark Software LLC. All rights reserved.
 
 This software is provided for viewing and reference purposes only. No permission is granted to use, copy, modify, merge, publish, distribute, sublicense, or sell copies without explicit written permission. See [LICENSE](LICENSE).
+
+---
+
+<p align="center">
+  <img src="docs/skylark-software-logo.svg" alt="Skylark Software" width="200">
+</p>
