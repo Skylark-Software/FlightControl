@@ -74,5 +74,5 @@ This software is provided for viewing and reference purposes only. No permission
 ---
 
 <p align="center">
-  <img src="docs/skylark-software-logo.svg" alt="Skylark Software" width="200">
+  <img src="docs/skylark-software-logo.svg" alt="Skylark Software" width="400">
 </p>
